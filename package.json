@@ -1,0 +1,15 @@
+{
+  "name": "sonnco-website",
+  "version": "1.0.0",
+  "description": "Sonnco marketing landing page — static site built with Tailwind CSS.",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/site.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./css/site.css --watch",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

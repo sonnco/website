@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/* Self-hosted Geist — the latin subset ships as one variable file covering the
+   full weight axis, so a single @font-face serves every weight the page uses. */
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/geist-latin-var.woff2") format("woff2");
+}
+
+@theme {
+  --font-sans: "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Breakpoints matched to the source design's two media queries */
+  --breakpoint-sm: 560px;
+  --breakpoint-md: 900px;
+
+  --color-ink: #191b20;
+  --color-ink-hover: #33363e;
+  --color-muted: #5a5f6b;
+  --color-muted-2: #8a8f99;
+  --color-nav-link: #4b4f58;
+  --color-hairline: #eef0f2;
+  --color-hairline-2: #f2f3f5;
+  --color-line: #e4e6ea;
+  --color-panel-tint: #fafbfc;
+  --color-slot: #f4f5f7;
+
+  /* Links keep the design's oklch blues */
+  --color-link: oklch(0.5 0.16 250);
+  --color-link-hover: oklch(0.42 0.16 250);
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+@layer components {
+  /* Pill CTA used in the nav, hero, pricing card, and closing section */
+  .btn {
+    @apply inline-block rounded-full bg-ink px-7 py-3.25 text-[15px] font-medium text-white transition-colors hover:bg-ink-hover hover:text-white;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Bespoke gradients from the source design. Expressing these multi-stop radial
+   washes as arbitrary-value utilities would be unreadable, so they stay as named
+   utilities the markup can apply like any other Tailwind class. */
+@utility glow-top {
+  background:
+    radial-gradient(ellipse 55% 65% at 38% 40%, oklch(0.84 0.1 235 / 0.8), transparent 65%),
+    radial-gradient(ellipse 50% 60% at 65% 35%, oklch(0.89 0.13 85 / 0.75), transparent 65%),
+    radial-gradient(ellipse 70% 55% at 50% 30%, oklch(0.88 0.07 210 / 0.5), transparent 70%);
+}
+
+@utility glow-bottom {
+  background:
+    radial-gradient(ellipse 55% 65% at 38% 60%, oklch(0.84 0.1 235 / 0.8), transparent 65%),
+    radial-gradient(ellipse 50% 60% at 65% 65%, oklch(0.89 0.13 85 / 0.75), transparent 65%),
+    radial-gradient(ellipse 70% 55% at 50% 70%, oklch(0.88 0.07 210 / 0.5), transparent 70%);
+}
+
+@utility panel-crm {
+  background:
+    radial-gradient(ellipse 80% 90% at 25% 15%, oklch(0.88 0.06 235 / 0.7), transparent 70%),
+    radial-gradient(ellipse 70% 80% at 80% 30%, oklch(0.93 0.08 85 / 0.6), transparent 70%),
+    oklch(0.96 0.02 220);
+}
+
+@utility panel-listings {
+  background:
+    radial-gradient(ellipse 80% 90% at 75% 15%, oklch(0.88 0.06 235 / 0.7), transparent 70%),
+    radial-gradient(ellipse 70% 80% at 20% 35%, oklch(0.93 0.08 85 / 0.6), transparent 70%),
+    oklch(0.96 0.02 220);
+}
+
+@utility panel-ai {
+  background:
+    radial-gradient(ellipse 80% 90% at 30% 20%, oklch(0.93 0.08 85 / 0.65), transparent 70%),
+    radial-gradient(ellipse 70% 80% at 75% 25%, oklch(0.88 0.06 235 / 0.65), transparent 70%),
+    oklch(0.96 0.02 220);
+}
+
+@utility panel-web {
+  background:
+    radial-gradient(ellipse 80% 90% at 70% 20%, oklch(0.93 0.08 85 / 0.6), transparent 70%),
+    radial-gradient(ellipse 70% 80% at 25% 30%, oklch(0.88 0.06 235 / 0.7), transparent 70%),
+    oklch(0.96 0.02 220);
+}
+
+/* Screenshot frame shadow — a two-part shadow that arbitrary values can't hold cleanly */
+@utility shot-shadow {
+  box-shadow:
+    0 12px 40px -12px oklch(0.4 0.06 240 / 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+@utility hero-shot-shadow {
+  box-shadow:
+    0 -1px 0 var(--color-line),
+    0 -24px 64px -32px rgba(25, 27, 32, 0.18);
+}
+
+/* Empty image slot: hatched placeholder that shows the intended screenshot's label */
+@utility slot-empty {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-slot),
+    var(--color-slot) 10px,
+    var(--color-hairline) 10px,
+    var(--color-hairline) 20px
+  );
+}
