@@ -5,91 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sonnco — The real estate platform that works while you sell</title>
     <meta name="description" content="CRM, listings, and follow-ups in one workspace — with AI built in, not bolted on. One price per office, everything included.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="fonts/geist-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/site.css?v=6">
 </head>
 <body>
     <div class="relative min-h-screen bg-white">
-        <div class="pointer-events-none absolute inset-x-0 top-0 h-105 overflow-hidden">
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-105 overflow-hidden mask-b-from-55%">
             <div class="glow-top pointer-events-none absolute -top-70 left-1/2 h-175 w-350 -translate-x-1/2 blur-2xl"></div>
         </div>
 
         <nav id="nav" data-scrolled="false"
-            class="sticky top-0 z-100 grid grid-cols-[1fr_auto_1fr] items-center border-b border-transparent px-10 py-4.5 transition duration-200 data-[scrolled=true]:border-hairline data-[scrolled=true]:bg-white/85 data-[scrolled=true]:backdrop-blur-md max-md:px-5 max-md:py-3.5">
-            <div class="flex items-center gap-2.5">
-                <div class="size-5.5 rounded-md bg-ink"></div>
-                <span class="text-base font-semibold tracking-[-0.01em] max-[360px]:hidden">Sonnco</span>
+            class="fade-down sticky top-0 z-100 grid grid-cols-[1fr_auto_1fr] items-center px-10 py-4.5 transition-[background-color,box-shadow,backdrop-filter,padding] duration-200 data-[scrolled=true]:bg-white/85 data-[scrolled=true]:py-2.5 data-[scrolled=true]:shadow-sm data-[scrolled=true]:backdrop-blur-md max-md:px-5 max-md:py-3.5 max-md:data-[scrolled=true]:py-2">
+            <a href="/" class="flex items-center gap-2.5 justify-self-start text-ink hover:text-ink">
+                <svg class="size-7 text-ink" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+                    <path d="M 84.547 27.006 A 41.5 41.5 0 0 1 22.492 81.074 L 37.499 75.612 A 28.5 28.5 0 0 0 71.802 31.645 Z"/>
+                    <path d="M 15.453 72.994 A 41.5 41.5 0 0 1 77.508 18.926 L 62.501 24.388 A 28.5 28.5 0 0 0 28.198 68.355 Z"/>
+                </svg>
+                <span class="text-lg font-medium tracking-[-0.01em] max-[360px]:hidden">Sonnco</span>
+            </a>
+            <div class="flex justify-self-center gap-7 text-[15px] max-sm:gap-5">
+                <a href="#features" class="-my-2.5 py-2.5 text-nav-link transition-colors hover:text-ink">Features</a>
+                <a href="#pricing" class="-my-2.5 py-2.5 text-nav-link transition-colors hover:text-ink">Pricing</a>
             </div>
-            <div class="flex justify-self-center gap-2 text-sm max-sm:gap-0.5">
-                <a href="#features" class="rounded-full px-3.5 py-1.75 text-nav-link hover:bg-hairline-2 hover:text-ink max-sm:px-2">Features</a>
-                <a href="#pricing" class="rounded-full px-3.5 py-1.75 text-nav-link hover:bg-hairline-2 hover:text-ink max-sm:px-2">Pricing</a>
-            </div>
-            <a href="#contact" class="btn justify-self-end px-5 py-2.25 text-sm">Contact</a>
+            <a href="#contact" class="btn relative justify-self-end px-5 py-2.25 text-sm after:absolute after:inset-x-0 after:-inset-y-0.5">Contact</a>
         </nav>
 
         <header class="relative px-10 pt-27.5 text-center max-md:px-5 max-md:pt-18">
-            <h1 class="relative mx-auto mb-5.5 max-w-190 text-balance text-[58px] font-medium leading-[1.1] tracking-[-0.022em] max-md:text-[40px]">The real estate platform that works while you sell.</h1>
-            <p class="relative mx-auto mb-8.5 max-w-140 text-pretty text-lg leading-[1.6] text-muted">CRM, listings, and follow-ups in one workspace — with AI built in, not bolted on.</p>
-            <a href="#contact" class="btn relative mb-22 max-md:mb-14">Request a demo</a>
-            <div class="hero-shot-shadow relative mx-auto max-w-270 overflow-hidden rounded-t-2xl">
-                <div class="h-150 w-full overflow-hidden bg-slot max-md:h-95">
-                    <img src="images/hero-2a.webp" width="1200" height="657"
-                        class="h-full w-full object-cover object-[center_top]"
+            <h1 class="rise-in relative mx-auto mb-5.5 max-w-190 text-balance text-[58px] font-medium leading-[1.1] tracking-[-0.022em] max-md:text-[40px]">The real estate platform that works while you sell</h1>
+            <p class="rise-in relative mx-auto mb-8.5 max-w-140 text-pretty text-lg leading-[1.6] text-muted [--rise-delay:80ms]">Every listing matched to every buyer automatically — with your CRM, portal publishing, and website in one workspace.</p>
+            <a href="#contact" class="btn rise-in relative mb-22 max-md:mb-14 [--rise-delay:160ms]">Request a demo</a>
+            <div class="rise-in hero-shot-shadow relative mx-auto max-w-290 rounded-t-2xl border border-b-0 border-line bg-white p-2 pb-0 [--rise-delay:240ms]">
+                <div class="h-150 w-full overflow-hidden rounded-t-lg bg-slot max-md:h-95">
+                    <img src="images/sonnco-properties-app.png" width="2872" height="1674"
+                        class="h-full w-full bg-[#fbfbfc] object-cover object-[center_top] rounded-t-lg outline -outline-offset-1 outline-black/10"
                         alt="The Sonnco workspace showing the client pipeline and listing details.">
                 </div>
             </div>
         </header>
 
         <section id="features" class="border-t border-hairline">
-            <div class="mx-auto max-w-270 px-16 pb-22.5 pt-27.5 max-md:px-5 max-md:pb-16 max-md:pt-18">
+            <div class="mx-auto max-w-290 px-16 pb-22.5 pt-27.5 max-md:px-5 max-md:pb-16 max-md:pt-18">
                 <h2 class="mb-24 text-center text-[40px] font-medium tracking-[-0.02em] max-md:mb-14 max-md:text-[30px]">Built for the way agents work</h2>
                 <div class="flex flex-col gap-27.5 max-md:gap-16">
 
-                    <div class="grid grid-cols-[340px_1fr] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
+                    <div class="grid grid-cols-[380px_1fr] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
                         <div class="self-end max-md:order-1 max-md:self-start">
-                            <h3 class="mb-3.5 text-[22px] font-semibold leading-[1.3] tracking-[-0.01em]">One pipeline for every client</h3>
-                            <p class="text-[14.5px] leading-[1.7] text-muted">Buyers, sellers, and leads live in a single CRM built for real estate — full history, notes, and next steps on every contact, so nothing slips between viewings.</p>
+                            <h3 class="mb-3.5 text-[26px] font-medium leading-[1.3] tracking-[-0.015em]">One pipeline for every client</h3>
+                            <p class="text-[16.5px] leading-[1.7] text-muted">Buyers, sellers, and leads in a single CRM built for real estate — every contact carries their full history, requirements, and next steps, so nothing slips between viewings.</p>
                         </div>
-                        <div class="panel-crm flex h-100 overflow-hidden rounded-2xl pl-11 pt-11 max-md:order-2 max-md:h-75">
-                            <div class="shot-shadow flex-1 overflow-hidden rounded-tl-xl">
-                                <div class="slot-empty flex h-full w-full items-center justify-center p-4 text-center text-[13px] text-muted-2">CRM pipeline screenshot</div>
-                            </div>
+                        <div class="panel-crm flex h-100 items-center justify-center overflow-hidden rounded-2xl p-9 max-md:order-2 max-md:h-75 max-md:p-6">
+                            <img src="images/sonnco-contact-matches.png" width="2880" height="1600" loading="lazy"
+                                class="shot-shadow w-full rounded-lg outline -outline-offset-1 outline-black/10"
+                                alt="A contact record in Sonnco showing their details, matched properties, and an AI-suggested next step.">
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-[1fr_340px] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
-                        <div class="panel-listings flex h-100 overflow-hidden rounded-2xl pr-11 pt-11 max-md:order-2 max-md:h-75">
-                            <div class="shot-shadow flex-1 overflow-hidden rounded-tr-xl">
-                                <div class="slot-empty flex h-full w-full items-center justify-center p-4 text-center text-[13px] text-muted-2">Listing management screenshot</div>
-                            </div>
+                    <div class="grid grid-cols-[1fr_380px] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
+                        <div class="panel-listings flex h-100 items-center justify-center overflow-hidden rounded-2xl p-9 max-md:order-2 max-md:h-75 max-md:p-6">
+                            <img src="images/listings.png" width="1600" height="889" loading="lazy"
+                                class="shot-shadow w-full rounded-lg outline -outline-offset-1 outline-black/10"
+                                alt="The Sonnco listings view with a property detail panel showing live sync status.">
                         </div>
                         <div class="self-end max-md:order-1 max-md:self-start">
-                            <h3 class="mb-3.5 text-[22px] font-semibold leading-[1.3] tracking-[-0.01em]">Listings without the re-typing</h3>
-                            <p class="text-[14.5px] leading-[1.7] text-muted">One record per property — photos, documents, and status in one place, published once and kept in sync everywhere your listings appear.</p>
+                            <h3 class="mb-3.5 text-[26px] font-medium leading-[1.3] tracking-[-0.015em]">Every listing, managed in one place</h3>
+                            <p class="text-[16.5px] leading-[1.7] text-muted">Create a listing once — photos, pricing, documents, availability — and publish it to portals, your website, and brochures from the same screen. Change anything and it syncs everywhere, so what buyers see is always what's true.</p>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-[340px_1fr] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
+                    <div id="websites" class="grid grid-cols-[380px_1fr] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
                         <div class="self-end max-md:order-1 max-md:self-start">
-                            <h3 class="mb-3.5 text-[22px] font-semibold leading-[1.3] tracking-[-0.01em]">AI built in, not bolted on</h3>
-                            <p class="text-[14.5px] leading-[1.7] text-muted">Listing copy drafted, calls summarised, follow-ups suggested — woven into every screen, so hours of admin become minutes and no lead goes cold.</p>
+                            <h3 class="mb-3.5 text-[26px] font-medium leading-[1.3] tracking-[-0.015em]">A bespoke website, in sync</h3>
+                            <p class="text-[16.5px] leading-[1.7] text-muted">We design and build websites for agencies that plug straight into Sonnco — listings, agents, and enquiries flow both ways with zero upkeep.</p>
                         </div>
-                        <div class="panel-ai flex h-100 overflow-hidden rounded-2xl pl-11 pt-11 max-md:order-2 max-md:h-75">
-                            <div class="shot-shadow flex-1 overflow-hidden rounded-tl-xl">
-                                <div class="slot-empty flex h-full w-full items-center justify-center p-4 text-center text-[13px] text-muted-2">AI assistant screenshot</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="websites" class="grid grid-cols-[1fr_340px] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
-                        <div class="panel-web flex h-100 overflow-hidden rounded-2xl pr-11 pt-11 max-md:order-2 max-md:h-75">
-                            <div class="shot-shadow flex-1 overflow-hidden rounded-tr-xl">
-                                <div class="slot-empty flex h-full w-full items-center justify-center p-4 text-center text-[13px] text-muted-2">Agency website example</div>
-                            </div>
-                        </div>
-                        <div class="self-end max-md:order-1 max-md:self-start">
-                            <h3 class="mb-3.5 text-[22px] font-semibold leading-[1.3] tracking-[-0.01em]">A bespoke website, in sync</h3>
-                            <p class="text-[14.5px] leading-[1.7] text-muted">We design and build websites for agencies that plug straight into Sonnco — listings, agents, and enquiries flow both ways with zero upkeep.</p>
+                        <div class="panel-web flex h-100 items-center justify-center overflow-hidden rounded-2xl p-9 max-md:order-2 max-md:h-75 max-md:p-6">
+                            <img src="images/sonnco-agency-website.png" width="2880" height="1600" loading="lazy"
+                                class="shot-shadow w-full rounded-lg outline -outline-offset-1 outline-black/10"
+                                alt="An agency website built by Sonnco, with a hero search over a coastal town and live listings below.">
                         </div>
                     </div>
 
@@ -97,41 +89,77 @@
             </div>
         </section>
 
-        <section class="mx-auto max-w-270 px-16 pb-27.5 pt-22.5 max-md:px-5 max-md:pb-18 max-md:pt-16">
+        <section class="mx-auto max-w-290 px-16 pb-27.5 pt-22.5 max-md:px-5 max-md:pb-18 max-md:pt-16">
             <h2 class="mb-13 text-center text-[28px] font-medium tracking-[-0.015em]">And even more</h2>
             <div class="grid grid-cols-3 gap-x-14 gap-y-11 max-md:grid-cols-2 max-md:gap-8 max-sm:grid-cols-1">
                 <div>
-                    <div class="mb-1.5 text-[15px] font-semibold">Follow-up automation</div>
-                    <div class="text-sm leading-[1.65] text-muted">Scheduled touchpoints and reminders keep every conversation moving.</div>
+                    <div class="mb-1.5 text-base font-medium">Matching engine</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Every new listing checked against every buyer's requirements the moment it goes live — matched buyers hear about it automatically.</div>
                 </div>
                 <div>
-                    <div class="mb-1.5 text-[15px] font-semibold">Reporting</div>
-                    <div class="text-sm leading-[1.65] text-muted">See where deals stand and where your time goes — no spreadsheets.</div>
+                    <div class="mb-1.5 text-base font-medium">Natural-language search</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Ask for "three-bed flats near the marina under 400k" and get exactly that — no filter forms.</div>
                 </div>
                 <div>
-                    <div class="mb-1.5 text-[15px] font-semibold">Shared team inbox</div>
-                    <div class="text-sm leading-[1.65] text-muted">Every enquiry lands in one place, assigned to the right agent.</div>
+                    <div class="mb-1.5 text-base font-medium">Real-time notifications</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Know the moment a lead replies, a match lands, or a price changes.</div>
                 </div>
                 <div>
-                    <div class="mb-1.5 text-[15px] font-semibold">Calendar &amp; viewings</div>
-                    <div class="text-sm leading-[1.65] text-muted">Book viewings and valuations without leaving the client record.</div>
+                    <div class="mb-1.5 text-base font-medium">Follow-ups &amp; reminders</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Automated touchpoints keep every conversation moving — set once, never forgotten.</div>
                 </div>
                 <div>
-                    <div class="mb-1.5 text-[15px] font-semibold">Document storage</div>
-                    <div class="text-sm leading-[1.65] text-muted">Contracts and compliance docs attached to the deal, not your inbox.</div>
+                    <div class="mb-1.5 text-base font-medium">AI built in, not bolted on</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Listing copy drafted, calls summarised, next steps suggested — woven into every screen.</div>
                 </div>
                 <div>
-                    <div class="mb-1.5 text-[15px] font-semibold">Mobile ready</div>
-                    <div class="text-sm leading-[1.65] text-muted">The full workspace in your pocket, for agents who live on the road.</div>
+                    <div class="mb-1.5 text-base font-medium">Metrics &amp; analytics</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Listing performance, pipeline health, response times — the numbers that run your office, live.</div>
+                </div>
+                <div>
+                    <div class="mb-1.5 text-base font-medium">Multi-language</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Work in your language, publish in your buyers' — the whole workspace speaks both.</div>
+                </div>
+                <div>
+                    <div class="mb-1.5 text-base font-medium">Seamless importing</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">Coming from another platform? Bring your contacts, listings, and photos across in one guided import.</div>
+                </div>
+                <div>
+                    <div class="mb-1.5 text-base font-medium">Automatic updates</div>
+                    <div class="text-[15px] leading-[1.65] text-muted">New features arrive as you work — nothing to install, nothing to migrate, ever.</div>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="border-t border-hairline px-10 py-27.5 max-md:px-5 max-md:py-18">
-            <div class="mx-auto max-w-270">
+        <section class="bg-zinc-50">
+            <div class="mx-auto max-w-290 px-16 py-22.5 max-md:px-5 max-md:py-16">
+                <h2 class="mb-10 text-[20px] font-medium tracking-[-0.01em] text-muted">Why Sonnco</h2>
+                <div class="grid grid-cols-4 gap-x-14 gap-y-9 max-md:grid-cols-2 max-md:gap-8 max-sm:grid-cols-1">
+                    <div>
+                        <div class="mb-1.5 text-base font-medium">Built in the industry</div>
+                        <div class="text-[15px] leading-[1.65] text-muted">Made by someone who works in real estate every day — not a tech company guessing.</div>
+                    </div>
+                    <div>
+                        <div class="mb-1.5 text-base font-medium">Any size of agency</div>
+                        <div class="text-[15px] leading-[1.65] text-muted">The same workspace fits a single agent, a busy office, or a multi-national franchise.</div>
+                    </div>
+                    <div>
+                        <div class="mb-1.5 text-base font-medium">Fast everywhere</div>
+                        <div class="text-[15px] leading-[1.65] text-muted">Pages load in under 50ms — on office wifi or a phone at a viewing.</div>
+                    </div>
+                    <div>
+                        <div class="mb-1.5 text-base font-medium">Secure by design</div>
+                        <div class="text-[15px] leading-[1.65] text-muted">Passwordless sign-in — nothing to forget, nothing to steal.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="px-10 py-27.5 max-md:px-5 max-md:py-18">
+            <div class="mx-auto max-w-290">
                 <h2 class="mb-4 text-center text-[40px] font-medium tracking-[-0.02em] max-md:text-[30px]">One price per office. Everything included.</h2>
-                <p class="mb-16 text-center text-[17px] text-muted max-md:mb-10">No per-user fees, no listing caps, no tiers.</p>
-                <div class="overflow-hidden rounded-[20px] border border-line">
+                <p class="mb-16 text-center text-lg text-muted max-md:mb-10">No per-user fees, no listing caps, no tiers.</p>
+                <div class="card-shadow overflow-hidden rounded-[20px]">
                     <div class="flex flex-wrap items-center justify-between gap-10 px-12 py-11 max-md:px-6 max-md:py-7">
                         <div>
                             <div class="flex items-baseline gap-3">
@@ -144,27 +172,27 @@
                     </div>
                     <div class="grid grid-cols-3 gap-x-12 gap-y-9 border-t border-hairline bg-panel-tint px-12 py-11 max-md:grid-cols-2 max-md:px-6 max-md:py-7 max-sm:grid-cols-1">
                         <div>
-                            <div class="mb-1.5 text-[15px] font-semibold">Every agent on your team</div>
+                            <div class="mb-1.5 text-[15px] font-medium">Every agent on your team</div>
                             <div class="text-sm leading-[1.65] text-muted">No per-user fees, ever.</div>
                         </div>
                         <div>
-                            <div class="mb-1.5 text-[15px] font-semibold">Every property in your portfolio</div>
+                            <div class="mb-1.5 text-[15px] font-medium">Every property in your portfolio</div>
                             <div class="text-sm leading-[1.65] text-muted">No listing caps, no tiers.</div>
                         </div>
                         <div>
-                            <div class="mb-1.5 text-[15px] font-semibold">Every photo, full resolution</div>
+                            <div class="mb-1.5 text-[15px] font-medium">Every photo, full resolution</div>
                             <div class="text-sm leading-[1.65] text-muted">Unlimited storage.</div>
                         </div>
                         <div>
-                            <div class="mb-1.5 text-[15px] font-semibold">Your agency website</div>
+                            <div class="mb-1.5 text-[15px] font-medium">Your agency website</div>
                             <div class="text-sm leading-[1.65] text-muted">Included, not an add-on.</div>
                         </div>
                         <div>
-                            <div class="mb-1.5 text-[15px] font-semibold">Video &amp; virtual tours</div>
+                            <div class="mb-1.5 text-[15px] font-medium">Video &amp; virtual tours</div>
                             <div class="text-sm leading-[1.65] text-muted">Embed from YouTube, Vimeo or Matterport.</div>
                         </div>
                         <div>
-                            <div class="mb-1.5 text-[15px] font-semibold">Publishing, all in</div>
+                            <div class="mb-1.5 text-[15px] font-medium">Publishing, all in</div>
                             <div class="text-sm leading-[1.65] text-muted">Portal publishing, WhatsApp, PDF brochures.</div>
                         </div>
                     </div>
@@ -178,19 +206,22 @@
 
             <section id="contact" class="relative border-t border-hairline px-10 py-32.5 text-center max-md:px-5 max-md:py-21">
                 <h2 class="mb-4.5 text-balance text-[44px] font-medium tracking-[-0.02em] max-md:text-[32px]">Spend your time closing, not typing.</h2>
-                <p class="mb-8.5 text-[17px] text-muted">See Sonnco on your own listings — a demo takes 20 minutes.</p>
+                <p class="mb-8.5 text-lg text-muted">See Sonnco on your own listings — a demo takes 20 minutes.</p>
                 <a href="#contact" class="btn">Request a demo</a>
             </section>
 
             <footer class="relative flex flex-wrap items-center justify-between gap-6 px-10 py-6.5 max-md:px-5">
                 <div class="flex items-center gap-2 text-[13.5px] text-muted-2">
-                    <div class="size-4 rounded bg-ink"></div>
+                    <svg class="size-4 text-ink" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+                        <path d="M 84.547 27.006 A 41.5 41.5 0 0 1 22.492 81.074 L 37.499 75.612 A 28.5 28.5 0 0 0 71.802 31.645 Z"/>
+                        <path d="M 15.453 72.994 A 41.5 41.5 0 0 1 77.508 18.926 L 62.501 24.388 A 28.5 28.5 0 0 0 28.198 68.355 Z"/>
+                    </svg>
                     © 2026 Sonnco
                 </div>
                 <div class="flex gap-7 text-[13.5px]">
-                    <a href="#" class="text-muted-2 hover:text-muted">Privacy</a>
-                    <a href="#" class="text-muted-2 hover:text-muted">Terms</a>
-                    <a href="#" class="text-muted-2 hover:text-muted">Contact</a>
+                    <a href="#" class="-my-3 py-3 text-muted-2 transition-colors hover:text-muted">Privacy</a>
+                    <a href="#" class="-my-3 py-3 text-muted-2 transition-colors hover:text-muted">Terms</a>
+                    <a href="#" class="-my-3 py-3 text-muted-2 transition-colors hover:text-muted">Contact</a>
                 </div>
             </footer>
         </div>
