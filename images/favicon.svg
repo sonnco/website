@@ -1,6 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
   <title>Sonnco</title>
-  <desc>Ring mark, two parallel diagonal cuts at the implied S terminals.</desc>
-  <path fill="#191b20" d="M 84.547 27.006 A 41.5 41.5 0 0 1 22.492 81.074 L 37.499 75.612 A 28.5 28.5 0 0 0 71.802 31.645 Z"/>
-  <path fill="#191b20" d="M 15.453 72.994 A 41.5 41.5 0 0 1 77.508 18.926 L 62.501 24.388 A 28.5 28.5 0 0 0 28.198 68.355 Z"/>
+  <desc>Eight-petal flower mark with a solid centre.</desc>
+  <g fill="#141B2D">
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(0 200 200)"/>
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(45 200 200)"/>
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(90 200 200)"/>
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(135 200 200)"/>
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(180 200 200)"/>
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(225 200 200)"/>
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(270 200 200)"/>
+    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(315 200 200)"/>
+    <circle cx="200" cy="200" r="36"/>
+  </g>
 </svg>

@@ -10,8 +10,19 @@
   src: url("../fonts/geist-latin-var.woff2") format("woff2");
 }
 
+/* Self-hosted Gambetta (Fontshare) — one variable file spanning 300–700,
+   used for the display headings. */
+@font-face {
+  font-family: "Gambetta";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/gambetta-var.woff2") format("woff2");
+}
+
 @theme {
   --font-sans: "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Gambetta", Georgia, "Times New Roman", serif;
 
   /* Breakpoints matched to the source design's two media queries */
   --breakpoint-sm: 560px;

@@ -7,7 +7,8 @@
     <meta name="description" content="CRM, listings, and follow-ups in one workspace — with AI built in, not bolted on. One price per office, everything included.">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="fonts/geist-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/site.css?v=6">
+    <link rel="preload" href="fonts/gambetta-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/site.css?v=9">
 </head>
 <body>
     <div class="relative min-h-screen bg-white">
@@ -18,13 +19,20 @@
         <nav id="nav" data-scrolled="false"
             class="fade-down sticky top-0 z-100 grid grid-cols-[1fr_auto_1fr] items-center px-10 py-4.5 transition-[background-color,box-shadow,backdrop-filter,padding] duration-200 data-[scrolled=true]:bg-white/85 data-[scrolled=true]:py-2.5 data-[scrolled=true]:shadow-sm data-[scrolled=true]:backdrop-blur-md max-md:px-5 max-md:py-3.5 max-md:data-[scrolled=true]:py-2">
             <a href="/" class="flex items-center gap-2.5 justify-self-start text-ink hover:text-ink">
-                <svg class="size-7 text-ink" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-                    <path d="M 84.547 27.006 A 41.5 41.5 0 0 1 22.492 81.074 L 37.499 75.612 A 28.5 28.5 0 0 0 71.802 31.645 Z"/>
-                    <path d="M 15.453 72.994 A 41.5 41.5 0 0 1 77.508 18.926 L 62.501 24.388 A 28.5 28.5 0 0 0 28.198 68.355 Z"/>
+                <svg class="size-7 text-ink" viewBox="0 0 400 400" fill="currentColor" aria-hidden="true">
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(0 200 200)"/>
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(45 200 200)"/>
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(90 200 200)"/>
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(135 200 200)"/>
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(180 200 200)"/>
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(225 200 200)"/>
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(270 200 200)"/>
+                    <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(315 200 200)"/>
+                    <circle cx="200" cy="200" r="36"/>
                 </svg>
-                <span class="text-lg font-medium tracking-[-0.01em] max-[360px]:hidden">Sonnco</span>
+                <span class="text-xl font-medium tracking-[-0.01em] max-[360px]:hidden">Sonnco</span>
             </a>
-            <div class="flex justify-self-center gap-7 text-[15px] max-sm:gap-5">
+            <div class="flex justify-self-center gap-7 text-base max-sm:gap-5">
                 <a href="#features" class="-my-2.5 py-2.5 text-nav-link transition-colors hover:text-ink">Features</a>
                 <a href="#pricing" class="-my-2.5 py-2.5 text-nav-link transition-colors hover:text-ink">Pricing</a>
             </div>
@@ -32,12 +40,12 @@
         </nav>
 
         <header class="relative px-10 pt-27.5 text-center max-md:px-5 max-md:pt-18">
-            <h1 class="rise-in relative mx-auto mb-5.5 max-w-190 text-balance text-[58px] font-medium leading-[1.1] tracking-[-0.022em] max-md:text-[40px]">The real estate platform that works while you sell</h1>
-            <p class="rise-in relative mx-auto mb-8.5 max-w-140 text-pretty text-lg leading-[1.6] text-muted [--rise-delay:80ms]">Your contacts, listings, and website in one place. Built by an estate agent.</p>
+            <h1 class="rise-in relative mx-auto mb-5.5 max-w-190 text-balance font-display text-[60px] font-[550] leading-[1.12] tracking-[-0.01em] max-md:text-[40px]">The real estate platform that works while you sell</h1>
+            <p class="rise-in relative mx-auto mb-8.5 max-w-140 text-pretty text-xl leading-[1.6] [--rise-delay:80ms]">Your contacts, listings, and website in one place.<br class="max-md:hidden"> Built by an estate agent.</p>
             <a href="#contact" class="btn rise-in relative mb-22 max-md:mb-14 [--rise-delay:160ms]">Request a demo</a>
             <div class="rise-in hero-shot-shadow relative mx-auto max-w-290 rounded-t-2xl border border-b-0 border-line bg-white p-2 pb-0 [--rise-delay:240ms]">
                 <div class="h-150 w-full overflow-hidden rounded-t-lg bg-slot max-md:h-95">
-                    <img src="images/sonnco-properties-app.png" width="2872" height="1674"
+                    <img src="images/sonnco-properties-app-v3.png" width="2880" height="1678"
                         class="h-full w-full bg-[#fbfbfc] object-cover object-[center_top] rounded-t-lg outline -outline-offset-1 outline-black/10"
                         alt="The Sonnco workspace showing the client pipeline and listing details.">
                 </div>
@@ -46,16 +54,16 @@
 
         <section id="features" class="border-t border-hairline">
             <div class="mx-auto max-w-290 px-16 pb-22.5 pt-27.5 max-md:px-5 max-md:pb-16 max-md:pt-18">
-                <h2 class="mb-24 text-center text-[40px] font-medium tracking-[-0.02em] max-md:mb-14 max-md:text-[30px]">Built for the way agents work</h2>
+                <h2 class="mb-24 text-center font-display text-[40px] font-[550] tracking-[-0.01em] max-md:mb-14 max-md:text-[30px]">Built for the way agents work</h2>
                 <div class="flex flex-col gap-27.5 max-md:gap-16">
 
                     <div class="grid grid-cols-[380px_1fr] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
                         <div class="self-end max-md:order-1 max-md:self-start">
                             <h3 class="mb-3.5 text-[26px] font-medium leading-[1.3] tracking-[-0.015em]">Every client, clearly organised</h3>
-                            <p class="text-[16.5px] leading-[1.7] text-muted">All your buyers, sellers, and leads together — see their full history, requirements, and next steps. Nothing falls through the cracks between viewings.</p>
+                            <p class="text-[17.5px] leading-[1.7]">All your buyers, sellers, and leads together — see their full history, requirements, and next steps. Nothing falls through the cracks between viewings.</p>
                         </div>
                         <div class="panel-crm flex h-100 items-center justify-center overflow-hidden rounded-2xl p-9 max-md:order-2 max-md:h-75 max-md:p-6">
-                            <img src="images/sonnco-contact-matches.png" width="2880" height="1600" loading="lazy"
+                            <img src="images/sonnco-contact-matches-v2.png" width="2880" height="1600" loading="lazy"
                                 class="shot-shadow w-full rounded-lg outline -outline-offset-1 outline-black/10"
                                 alt="A contact record in Sonnco showing their details, matched properties, and an AI-suggested next step.">
                         </div>
@@ -63,23 +71,23 @@
 
                     <div class="grid grid-cols-[1fr_380px] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
                         <div class="panel-listings flex h-100 items-center justify-center overflow-hidden rounded-2xl p-9 max-md:order-2 max-md:h-75 max-md:p-6">
-                            <img src="images/listings.png" width="1600" height="889" loading="lazy"
+                            <img src="images/sonnco-properties-sync-v2.png" width="2880" height="1600" loading="lazy"
                                 class="shot-shadow w-full rounded-lg outline -outline-offset-1 outline-black/10"
                                 alt="The Sonnco listings view with a property detail panel showing live sync status.">
                         </div>
                         <div class="self-end max-md:order-1 max-md:self-start">
                             <h3 class="mb-3.5 text-[26px] font-medium leading-[1.3] tracking-[-0.015em]">Every listing, published everywhere</h3>
-                            <p class="text-[16.5px] leading-[1.7] text-muted">Create a listing once and publish it to portals, your website, and brochures from the same screen. Change anything and it updates everywhere, so what buyers see is always what's true.</p>
+                            <p class="text-[17.5px] leading-[1.7]">Create a listing once and publish it to portals, your website, and brochures from the same screen. Change anything and it updates everywhere, so what buyers see is always what's true.</p>
                         </div>
                     </div>
 
                     <div id="websites" class="grid grid-cols-[380px_1fr] items-center gap-18 max-md:grid-cols-1 max-md:gap-7">
                         <div class="self-end max-md:order-1 max-md:self-start">
                             <h3 class="mb-3.5 text-[26px] font-medium leading-[1.3] tracking-[-0.015em]">A website that runs itself</h3>
-                            <p class="text-[16.5px] leading-[1.7] text-muted">Every agency gets a fast, polished site connected straight to Sonnco — listings publish themselves, enquiries land in your CRM, nothing to maintain.</p>
+                            <p class="text-[17.5px] leading-[1.7]">Every agency gets a fast, polished site connected straight to Sonnco — listings publish themselves, enquiries land in your CRM, nothing to maintain.</p>
                         </div>
                         <div class="panel-web flex h-100 items-center justify-center overflow-hidden rounded-2xl p-9 max-md:order-2 max-md:h-75 max-md:p-6">
-                            <img src="images/sonnco-agency-website.png" width="2880" height="1600" loading="lazy"
+                            <img src="images/sonnco-agency-website-v2.png" width="2880" height="1600" loading="lazy"
                                 class="shot-shadow w-full rounded-lg outline -outline-offset-1 outline-black/10"
                                 alt="An agency website built by Sonnco, with a hero search over a coastal town and live listings below.">
                         </div>
@@ -157,8 +165,8 @@
 
         <section id="pricing" class="px-10 py-27.5 max-md:px-5 max-md:py-18">
             <div class="mx-auto max-w-290">
-                <h2 class="mb-4 text-center text-[40px] font-medium tracking-[-0.02em] max-md:text-[30px]">One price per office. Everything included.</h2>
-                <p class="mb-16 text-center text-lg text-muted max-md:mb-10">No per-user fees, no listing caps, no tiers.</p>
+                <h2 class="mb-4 text-center font-display text-[40px] font-[550] tracking-[-0.01em] max-md:text-[30px]">One price per office. Everything included.</h2>
+                <p class="mb-16 text-center text-lg max-md:mb-10">No per-user fees, no listing caps, no tiers.</p>
                 <div class="card-shadow overflow-hidden rounded-[20px]">
                     <div class="flex flex-wrap items-center justify-between gap-10 px-12 py-11 max-md:px-6 max-md:py-7">
                         <div>
@@ -205,16 +213,23 @@
             <div class="glow-bottom pointer-events-none absolute -bottom-90 left-1/2 h-175 w-350 -translate-x-1/2 blur-2xl"></div>
 
             <section id="contact" class="relative border-t border-hairline px-10 py-32.5 text-center max-md:px-5 max-md:py-21">
-                <h2 class="mb-4.5 text-balance text-[44px] font-medium tracking-[-0.02em] max-md:text-[32px]">Spend your time closing, not typing.</h2>
-                <p class="mb-8.5 text-lg text-muted">See Sonnco on your own listings — a demo takes 20 minutes.</p>
+                <h2 class="mb-4.5 text-balance font-display text-[44px] font-[550] tracking-[-0.01em] max-md:text-[32px]">Spend your time closing, not typing.</h2>
+                <p class="mb-8.5 text-lg">See Sonnco on your own listings — a demo takes 20 minutes.</p>
                 <a href="#contact" class="btn">Request a demo</a>
             </section>
 
             <footer class="relative flex flex-wrap items-center justify-between gap-6 px-10 py-6.5 max-md:px-5">
                 <div class="flex items-center gap-2 text-[13.5px] text-muted-2">
-                    <svg class="size-4 text-ink" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-                        <path d="M 84.547 27.006 A 41.5 41.5 0 0 1 22.492 81.074 L 37.499 75.612 A 28.5 28.5 0 0 0 71.802 31.645 Z"/>
-                        <path d="M 15.453 72.994 A 41.5 41.5 0 0 1 77.508 18.926 L 62.501 24.388 A 28.5 28.5 0 0 0 28.198 68.355 Z"/>
+                    <svg class="size-4 text-ink" viewBox="0 0 400 400" fill="currentColor" aria-hidden="true">
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(0 200 200)"/>
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(45 200 200)"/>
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(90 200 200)"/>
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(135 200 200)"/>
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(180 200 200)"/>
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(225 200 200)"/>
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(270 200 200)"/>
+                        <ellipse cx="200" cy="112" rx="26" ry="76" transform="rotate(315 200 200)"/>
+                        <circle cx="200" cy="200" r="36"/>
                     </svg>
                     © 2026 Sonnco
                 </div>
