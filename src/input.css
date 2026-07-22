@@ -48,6 +48,10 @@
 }
 
 @layer base {
+  /* Alpine: keep x-show panels (language dropdown) hidden until Alpine boots */
+  [x-cloak] {
+    display: none !important;
+  }
   html {
     scroll-behavior: smooth;
     /* Keep anchor targets clear of the sticky nav */
@@ -69,6 +73,11 @@
   /* Pill CTA used in the nav, hero, pricing card, and closing section */
   .btn {
     @apply inline-block rounded-full bg-ink px-7 py-3.25 text-[15px] font-medium text-white transition-[background-color,scale] duration-150 ease-out hover:bg-ink-hover hover:text-white active:scale-[0.96];
+  }
+
+  /* Secondary pill — outlined variant for the non-featured pricing tiers */
+  .btn-outline {
+    @apply inline-block rounded-full border border-line bg-white px-7 py-3 text-[15px] font-medium text-ink transition-[background-color,scale] duration-150 ease-out hover:bg-slot hover:text-ink active:scale-[0.96];
   }
 }
 
@@ -164,6 +173,37 @@
     radial-gradient(ellipse 80% 90% at 70% 20%, oklch(0.84 0.12 48 / 0.55), transparent 70%),
     radial-gradient(ellipse 70% 80% at 25% 30%, oklch(0.87 0.07 8 / 0.6), transparent 70%),
     oklch(0.96 0.016 62);
+}
+
+/* Featured pricing tier: the glow palette at whisper opacity, anchored to the
+   column's top edge and fading out well before the feature panel below. Framed
+   on all four sides by deepened takes on the same stops (border-image, so it
+   needs no radius — the column sits inside the card's clipped corners). */
+@utility panel-featured {
+  border: 1px solid;
+  border-image: linear-gradient(135deg, oklch(0.78 0.1 8), oklch(0.74 0.15 40), oklch(0.72 0.11 245)) 1;
+  background:
+    radial-gradient(ellipse 90% 55% at 15% 0%, oklch(0.87 0.07 8 / 0.35), transparent 62%),
+    radial-gradient(ellipse 80% 50% at 55% 0%, oklch(0.8 0.14 44 / 0.22), transparent 60%),
+    radial-gradient(ellipse 90% 60% at 100% 0%, oklch(0.82 0.09 245 / 0.3), transparent 64%);
+}
+
+/* Portal logo strip: two identical lists (gap-4 pr-4 keeps the seam spacing
+   equal to the in-list gap) drift left by exactly one list-width, looping
+   seamlessly. The global reduced-motion rule freezes it to a static row. */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility marquee {
+  animation: marquee 45s linear infinite;
+}
+
+/* Soft crop at the strip's edges, matching the site's masked glows */
+@utility logo-fade {
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }
 
 /* Card elevation without a solid border: a 1px shadow ring plus two soft
